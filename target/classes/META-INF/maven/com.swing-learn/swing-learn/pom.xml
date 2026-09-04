@@ -3,12 +3,21 @@
   <groupId>com.swing-learn</groupId>
   <artifactId>swing-learn</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+	<maven.compiler.target>17</maven.compiler.target>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ojdbc8</artifactId>
       <version>23.5.0.24.07</version>
     </dependency>
+    <dependency>
+	    <groupId>org.jfree</groupId>
+	    <artifactId>jfreechart</artifactId>
+	    <version>1.5.4</version>
+	</dependency>
   </dependencies>
 </project>

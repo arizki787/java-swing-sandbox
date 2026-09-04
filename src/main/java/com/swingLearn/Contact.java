@@ -6,28 +6,40 @@ public class Contact {
 	private String lname;
 	private String email;
 	private String phone;
+	private int departmentId;
+	private String departmentName;
 
-	public Contact(int id, String fname, String lname, String email, String phone) {
+	public Contact(String fname, String lname, String email, String phone, int departmentId) {
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.phone = phone;
+		this.departmentId = departmentId;
+	}
 
+	public Contact(int id, String fname, String lname, String email, String phone, int departmentId) {
+		this(id, fname, lname, email, phone, departmentId, null);
+	}
+
+	public Contact(int id, String fname, String lname, String email, String phone, int departmentId,
+			String departmentName) {
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.email = email;
 		this.phone = phone;
+		this.departmentId = departmentId;
+		this.departmentName = departmentName;
 	}
 
 	@Override
 	public String toString() {
 		return "Contact [id=" + id + ", fname=" + fname + ", lname=" + lname + ", email=" + email + ", phone=" + phone
-				+ "]";
+				+ ", departmentId=" + departmentId + "]";
 	}
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getFname() {
@@ -46,6 +58,10 @@ public class Contact {
 		this.lname = lname;
 	}
 
+	public String getName() {
+		return getFname() + " " + getLname();
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -62,4 +78,15 @@ public class Contact {
 		this.phone = phone;
 	}
 
+	public int getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
 }
